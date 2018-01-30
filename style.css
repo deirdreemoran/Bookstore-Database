@@ -1,0 +1,58 @@
+table {
+  border-style: solid;
+}
+
+th,
+td {
+  border-style: solid;
+}
+
+div.outer-content {
+  float: left;
+  width: 75%;
+  margin-top: 20px;
+  background-color: pink;
+}
+
+div.inner-content {
+  background-color: blue;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
+form {
+  float: left;
+  text-align: left;
+  line-height: 2.2em;
+  width: 100%;
+}
+
+input {
+  width: static;
+}
+
+.dataParts {
+  border-style: solid;
+  border-color: grey;
+  border-width: .5px;
+  border-spacing: 10px;
+  padding: 5px;
+  }
+
+input[type="radio"] {
+  float: left;
+  margin-right: 1em;
+}
+
+label>label {
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.row:nth-of-type(2n + 2) {
+    background: #FEDA8C;
+}
+.row:nth-of-type(2n + 1){
+  background: #C1F4FE;
+}
