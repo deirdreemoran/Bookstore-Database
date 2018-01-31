@@ -1,0 +1,59 @@
+<h1
+>bs_customerhandlebarse</h1>
+
+
+<form method="post" action="/customers">
+  <label>First Name: </label><input type="text" name="firstName" ><br>
+  <label>Last Name: </label> <input type="text" name="lastName" ><br>
+  <label>paymentMethod: </label><input type="text" name="paymentMethod" ><br>
+
+  <input type="submit" name="Add Customer" value="Add Customer">
+</form>
+
+
+    
+{{#if bs_customer}}
+<table border="solid" name="bs_customer">
+<th>Customer ID
+    <th>First Name
+    <th>Last Name
+    <th>Payment Method
+    </th>
+  {{#each bs_customer}}
+  <tr>
+    <td>{{this.customerID}}</td>
+    <td>{{this.firstName}}</td>
+    <td>{{this.lastName}}</td>
+    <td>{{this.paymentMethod}}</td>
+    <td><form method="post" action="/customers">
+      <input type="hidden" name="customerID" value="{{this.customerID}}">
+      <input type="submit" name="Delete" value="Delete">
+    </form></td>
+    <td><form method="get" action="/customers">
+          <input type="hidden" name="customerID" value="{{this.customerID}}">
+          <input type="hidden" name="firstName" value="{{this.firstName}}">
+          <input type="hidden" name="lastName" value="{{this.lastName}}">
+          <input type="hidden" name="paymentMethod" value="{{this.paymentMethod}}">
+
+          <input type="submit" name="Edit" value="Edit">
+    </form></td>
+  </tr>
+  {{/each}}
+</table>
+{{/if}}
+     
+
+
+<td><form method="get" action="/stores">
+<input type="submit" name="Store Table" value="Store Table">
+    </form></td>
+    
+    
+    <td><form method="get" action="/books">
+    <input type="submit" name="Book Table" value="Book Table">
+    </form></td>
+    
+    <td><form method="get" action="/employees">
+        <input type="submit" name="Employee Table" value="Employee Table">
+    </form></td>
+    

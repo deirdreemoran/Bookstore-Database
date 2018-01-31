@@ -1,0 +1,19 @@
+<h1>updateBook.handlebars</h1>
+
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+<form method="get" action="/updateBook">
+  <label>Publisher ID: </label><input type="number" name="pubID" value="{{this.pubID}}"><br>
+  <label>Date Published: </label><input type="text" name="datePublished" value="{{this.datePublished}}"><br>
+  <label>Title: </label><input type="text" name="title" value="{{this.title}}"><br>
+  <label>Author First Name: </label><input type="text" name="authorFname" value="{{this.authorFname}}"><br>
+  <label>Author Last Name: </label><input type="text" name="authorLname" value="{{this.authorLname}}"><br>
+  <label>Price: </label><input type="text" name="price" value="{{this.price}}"><br>
+
+  <input type="hidden" name="bookID" value="{{this.bookID}}">
+  <input type="submit" name="Update Book" value="Update Book">
+</form>
+
+<form action="/books">
+    <input type="submit" value="Return to Books Table"/>
+</form>

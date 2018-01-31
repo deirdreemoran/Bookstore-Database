@@ -1,0 +1,20 @@
+<h1>updatepublishers.handlebars</h1>
+
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+<form method="get" action="/updatePublisher">
+  <label>Publisher Name: </label><input type="text" name="publisherName" value="{{this.publisherName}}"><br>
+
+  <label>Address: </label><input type="text" name="address" value="{{this.address}}"><br>
+  <label>City: </label><input type="text" name="city" value="{{this.city}}"><br>
+  <label>State: </label><input type="text" name="state" value="{{this.state}}"><br>
+  <label>Zipcode: </label><input type="number" name="zipcode" value="{{this.zipcode}}"><br>
+  <label>Country: </label><input type="text" name="country" value="{{this.country}}"><br>
+
+  <input type="hidden" name="publisherID" value="{{this.publisherID}}">
+  <input type="submit" name="Update Publisher" value="Update Publisher">
+</form>
+
+<form action="/publishers">
+    <input type="submit" value="Return to Publisher table"/>
+</form>

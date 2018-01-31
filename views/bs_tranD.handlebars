@@ -1,0 +1,48 @@
+<h1>transaction details table bs</h1>
+<h1>bs_pubhandlebars</h1>
+
+
+<form method="post" action="/tranD">
+  <label>transaction ID: </label><input type="number" name="tID" ><br>
+  <label>Author: </label><input type="text" name="author" ><br>
+    <label>Title: </label><input type="text" name="title" ><br>
+
+  <input type="submit" name="Add Transaction Details" value="Add Transaction Details">
+</form>
+
+{{#if bs_tranD}}
+<table border="solid" name="bs_tranD">
+<th>Product ID
+    <th>Transaction ID
+    <th>Author
+    <th>Title
+    
+</th>
+  {{#each bs_tranD}}
+  <tr>
+    <td>{{this.pID}}</td>
+    <td>{{this.tID}}</td>
+    <td>{{this.author}}</td>
+    <td>{{this.title}}</td>
+     <td><form method="post" action="/tranD">
+    	<input type="hidden" name="pID" value="{{this.pID}}">
+      <input type="submit" name="Delete" value="Delete">
+    </form></td>
+    
+    <td><form method="get" action="/tranD">
+          <input type="hidden" name="pID" value="{{this.pID}}">
+          <input type="hidden" name="tID" value="{{this.tID}}">
+          <input type="hidden" name="author" value="{{this.author}}">
+          <input type="hidden" name="title" value="{{this.title}}">
+          <input type="submit" name="Edit" value="Edit">
+    </form></td>
+  </tr>
+  {{/each}}
+</table>
+{{/if}}
+
+
+<td><form method="get" action="/">
+<input type="submit" name="Home" value="Home">
+    </form></td>
+    

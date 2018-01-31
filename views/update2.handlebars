@@ -1,0 +1,21 @@
+<h1>Edit an Exercise</h1>
+
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+<form method="get" action="/update">
+  <label>Exercise Name: </label><input type="text" name="name" value="{{this.name}}"><br>
+  <label>Reps: </label><input type="number" name="reps" value="{{this.reps}}"><br>
+  <label>Weight: </label><input type="number" name="weight" value="{{this.weight}}"><br>
+  <label>Date: </label><input type="date" name="date" value="{{this.date}}"><br>
+  <label>Lbs </label> <input type="radio" name="lbs" value="1"><br>
+    <label>Kgs </label> <input type="radio" name="kgs" value="0"><br>
+
+          <input type="hidden" name="id" value="{{this.id}}">
+  <input type="submit" name="Update" value="Update">
+</form>
+
+<form action="http://flip3.engr.oregonstate.edu:5642/">
+    <input type="submit" value="Go back to Workout Tracker" />
+</form>
+
+

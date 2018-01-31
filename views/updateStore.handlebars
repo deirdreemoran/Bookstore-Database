@@ -1,0 +1,18 @@
+<h1>updatestore.handlebars/h1>
+
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+<form method="get" action="/updateStore">
+  <label>Address: </label><input type="text" name="address" value="{{this.address}}"><br>
+  <label>City: </label><input type="text" name="city" value="{{this.city}}"><br>
+  <label>State: </label><input type="text" name="state" value="{{this.state}}"><br>
+  <label>Zipcode: </label><input type="text" name="zipcode" value="{{this.zipcode}}"><br>
+  <label>Country: </label><input type="text" name="country" value="{{this.country}}"><br>
+
+  <input type="hidden" name="sID" value="{{this.sID}}">
+  <input type="submit" name="Update Store" value="Update Store">
+</form>
+
+<form action="/stores">
+    <input type="submit" value="Return to Store table"/>
+</form>

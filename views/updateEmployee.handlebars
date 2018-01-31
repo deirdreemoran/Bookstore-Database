@@ -1,0 +1,17 @@
+<h1>updateemployeehandlebars</h1>
+
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+<form method="get" action="/updateEmployee">
+  <label>IM IN UPDATEEMPLOYEE AND AM GET METHODFirst Name: </label><input type="text" name="firstName" value="{{this.firstName}}"><br>
+  <label>Last Name: </label><input type="text" name="lastName" value="{{this.lastName}}"><br>
+  <label>PRESSING UPDATE CUSTOMER WILL GET YOU INTO UPDATECUSTOMER SEPAR. FXNStore ID: </label><input type="number" name="storeID" value="{{this.storeID}}"><br>
+  <label>Position: </label><input type="text" name="position" value="{{this.position}}"><br>
+
+  <input type="hidden" name="employeeID" value="{{this.employeeID}}">
+  <input type="submit" name="Update Employee" value="Update Employee">
+</form>
+
+<form method="get" action="/employees">
+    <input type="submit" value="Return to Employee Table"/>
+</form>

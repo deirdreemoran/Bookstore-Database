@@ -1,0 +1,64 @@
+<h1>bs_employeehandlebarse</h1>
+
+
+<form method="post" action="/employees">
+  <label>First Name: </label><input type="text" name="firstName" ><br>
+  <label>Last Name: </label> <input type="text" name="lastName" ><br>
+  <label>Store ID: </label><input type="number" name="storeID" ><br>
+  <label>Position: </label><input type="text" name="position" ><br>
+
+  <input type="submit" name="Add Employee" value="Add Employee">
+</form>
+
+
+    
+{{#if bs_employee}}
+<table border="solid" name="bs_employee">
+<th>Employee ID
+    <th>First Name
+    <th>Last Name
+    <th>StoreID
+    <th>Position
+
+    </th>
+  {{#each bs_employee}}
+  <tr>
+    <td>{{this.employeeID}}</td>
+    <td>{{this.firstName}}</td>
+    <td>{{this.lastName}}</td>
+    <td>{{this.storeID}}</td>
+    <td>{{this.position}}</td>
+
+    <td><form method="post" action="/employees">
+      <input type="hidden" name="employeeID" value="{{this.employeeID}}">
+      <input type="submit" name="Delete" value="Delete">
+    </form></td>
+    <td><form method="get" action="/employees">
+          <input type="hidden" name="employeeID" value="{{this.employeeID}}">
+          <input type="hidden" name="firstName" value="{{this.firstName}}">
+          <input type="hidden" name="lastName" value="{{this.lastName}}">
+          <input type="hidden" name="storeID" value="{{this.storeID}}"> 
+          <input type="hidden" name="position" value="{{this.position}}">
+
+         <input type="submit" name="Edit" value="Edit">
+    </form></td>
+  </tr>
+  {{/each}}
+</table>
+{{/if}}
+     
+
+
+<td><form method="get" action="/stores">
+<input type="submit" name="Store Table" value="Store Table">
+    </form></td>
+    
+    
+    <td><form method="get" action="/books">
+    <input type="submit" name="Book Table" value="Book Table">
+    </form></td>
+    
+    <td><form method="get" action="/customers">
+        <input type="submit" name="Customer Table" value="Customer Table">
+    </form></td>
+    

@@ -1,0 +1,13 @@
+<h1>updatetran.handlebars</h1>
+
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+<form method="get" action="/updateTran">
+  <label>Customer ID: </label><input type="number" name="cID" value="{{this.cID}}"><br>
+  <label>Employee ID: </label><input type="number" name="eID" value="{{this.eID}}"><br>
+  <input type="hidden" name="tranID" value="{{this.tranID}}">
+  <input type="submit" name="Update Transaction" value="Update Transaction">
+</form>
+<form action="/tran">
+    <input type="submit" value="Return to Transaction "/>
+</form>
