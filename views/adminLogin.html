@@ -1,5 +1,26 @@
-<h1>bs_storehandlebars</h1>
-<!--
+<h1>Admin Login</h1>
+
+
+  
+    <td><form method="get" action="/getAllAdminAccounts">
+        <input type="submit" name="Admin Table" value="Admin Table">
+    </form></td>
+  <div>
+</div>   
+ 
+ 
+ <form method="post" action="/adminLogin">
+  
+   <div class="container">
+     <label>Username/Email</label>
+     <input type="text" placeholder="" name="email" required><br></br>
+      <label>Password</label>
+     <input type="password" placeholder="Enter Password" name="password" required>
+     <input type="submit" > 
+       
+  </div>
+  </form>
+  <!--
 <form method="post" action="/stores">
   <label>Address: </label><input type="text" name="address" ><br>
   <label>City: </label> <input type="text" name="city" ><br>
